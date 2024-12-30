@@ -1,6 +1,7 @@
+package com.ezzy.notepad.database
+
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.ezzy.notepad.Note
 
 @Dao
 interface NoteDao {

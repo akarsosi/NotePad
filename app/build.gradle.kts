@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    kotlin("kapt") // Enable KAPT for annotation processing
+    id("kotlin-kapt")
 }
 
 android {
@@ -49,7 +49,7 @@ dependencies {
     // Room dependencies
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
-    annotationProcessor(libs.room.compiler) // For Kotlin
+    kapt(libs.room.compiler)
 
     // Lifecycle dependencies
     implementation(libs.lifecycle.viewmodel.ktx)

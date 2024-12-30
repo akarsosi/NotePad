@@ -1,7 +1,9 @@
+package com.ezzy.notepad
+
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.ezzy.notepad.Note
+import com.ezzy.notepad.database.Note
 import kotlinx.coroutines.launch
 
 class NoteViewModel(private val repository: NoteRepository) : ViewModel() {

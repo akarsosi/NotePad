@@ -1,7 +1,5 @@
 package com.ezzy.notepad
 
-import NoteRepository
-import NoteViewModel
 import android.os.Bundle
 import android.view.LayoutInflater
 
@@ -13,6 +11,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.ezzy.notepad.database.DatabaseProvider
+import com.ezzy.notepad.database.Note
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Initialize ViewModel
-        val noteDao = DatabaseProvider.getDatabase(this).noteDao()
+        val noteDao = DatabaseProvider.getDatabase(this)!!.noteDao()
         val repository = NoteRepository(noteDao)
         noteViewModel = NoteViewModel(repository)
 

@@ -1,3 +1,5 @@
+package com.ezzy.notepad.database // Ensure this matches your package structure
+
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
