@@ -1,5 +1,4 @@
-package com.ezzy.notepad
-import NoteDao
+package com.ezzy.notepad.database
 import androidx.room.Database
 import androidx.room.RoomDatabase
 

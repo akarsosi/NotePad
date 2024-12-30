@@ -1,5 +1,8 @@
+package com.ezzy.notepad
+
 import androidx.lifecycle.LiveData
-import com.ezzy.notepad.Note
+import com.ezzy.notepad.database.Note
+import com.ezzy.notepad.database.NoteDao
 
 class NoteRepository(private val noteDao: NoteDao) {
     val allNotes: LiveData<List<Note>> = noteDao.getAllNotes()
